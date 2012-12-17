@@ -48,6 +48,7 @@ an original sentence. Prints a progressbar to the terminal to show progress.
 def SortTags(sentenceList):
     TaggedSen = [];
     TagDict   = {};
+    print "Processing... \n";
     pbar = ProgressBar(widgets=[Percentage(), Bar()], maxval=100).start();
     i = 0;
     for sentence in sentenceList:
@@ -59,14 +60,14 @@ def SortTags(sentenceList):
                 TagDict[tagged[0]] = tagged[1];
 
         TaggedSen.append(TagDict);
-        # print TagDict;      # - debug 
+        # print TagDict;    - debug 
         TagDict = {};
         pbar.update( i * 100 / len(sentenceList));
         i = i+1;
 
     pbar.finish();
 
-    # print TaggedSen;      # - debug          
+    # print TaggedSen;     - debug          
  
 
 """inputPrompt - Prompts the user for terminal input containing the absolute path 
