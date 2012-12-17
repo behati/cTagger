@@ -25,7 +25,9 @@
     <Compile Include="cTagger.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Corpus\parole-small.txt" />
     <Content Include="Corpus\parole.txt" />
+    <Content Include="ReadMe.md" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Corpus\" />
