@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>63b28364-7fbe-438a-b544-b28c43a2c685</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>bin\cTagger.py</StartupFile>
+    <StartupFile>cTagger.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,24 +22,32 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="bin\cTagger.py" />
-    <Compile Include="bin\modules\progressbar\compat.py" />
-    <Compile Include="bin\modules\progressbar\widgets.py" />
-    <Compile Include="bin\modules\progressbar\__init__.py" />
-    <Compile Include="bin\modules\__init__.py" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="corpus\parole-small.txt" />
     <Content Include="corpus\parole.txt" />
+    <Content Include="modules\progressbar\compat.pyc" />
+    <Content Include="modules\progressbar\progressbar.pyc" />
+    <Content Include="modules\progressbar\terminal.pyc" />
+    <Content Include="modules\progressbar\widgets.pyc" />
+    <Content Include="modules\progressbar\__init__.pyc" />
+    <Content Include="modules\__init__.pyc" />
     <Content Include="ReadMe.md" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="corpus" />
-    <Folder Include="bin" />
-    <Folder Include="bin\modules" />
-    <Folder Include="bin\modules\progressbar" />
     <Folder Include="docs\" />
+    <Folder Include="modules\" />
+    <Folder Include="modules\progressbar\" />
     <Folder Include="tags" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cTagger.py" />
+    <Compile Include="modules\progressbar\compat.py" />
+    <Compile Include="modules\progressbar\example.py" />
+    <Compile Include="modules\progressbar\progressbar.py" />
+    <Compile Include="modules\progressbar\terminal.py" />
+    <Compile Include="modules\progressbar\widgets.py" />
+    <Compile Include="modules\progressbar\__init__.py" />
+    <Compile Include="modules\__init__.py" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
 </Project>
