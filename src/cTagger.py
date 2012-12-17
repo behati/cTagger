@@ -45,7 +45,7 @@ def importText(location):
 """SortTags(List)
 Takes a list of sentences and cuts each word in the sentence from its' tag, then places
 word and tag into a key/value dictionary. Returns a list of dictionaries, each representing
-an original sentence 
+an original sentence. Prints a progressbar to the terminal to show progress. 
 """
    
 def SortTags(sentenceList):
