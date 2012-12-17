@@ -17,7 +17,15 @@ def importText(location):
 
     # Use a regular expression matching a full-stop not preceded by an integer (numeric)
     # to split the text into full sentences.
-    
+    sentences = re.split('\s+([.][/]RESID_SIGN)+',text);
+
+    # Since we've split by the above expression, we add it to each sentence and remove stand-alones
+    tempSen  = filter(lambda x: x != "./RESID_SIGN", sentences);
+    finalSen = [];
+    for s in tempSen:
+        finalSen.append(s + " ./RESID_SIGN");
+
+    # print finalSen;   - debug
     
 
 """inputPrompt - Prompts the user for terminal input containing the absolute path 
@@ -34,3 +42,4 @@ def main():
     inputPrompt();
 if __name__ =='__main__':
     main();
+
