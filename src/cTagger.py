@@ -4,6 +4,13 @@
 import os
 import re
 import sys
+import time
+from progressbar import AnimatedMarker, Bar, BouncingBar, Counter, ETA, \
+                        FileTransferSpeed, FormatLabel, Percentage, \
+                        ProgressBar, ReverseBar, RotatingMarker, \
+                        SimpleProgress, Timer
+
+
 
 """importText
 Opens the file specified by the user using the 'rU' flag. Returns an error
@@ -44,18 +51,25 @@ an original sentence
 def SortTags(sentenceList):
     TaggedSen = [];
     TagDict   = {};
-
+    pbar = ProgressBar(widgets=[Percentage(), Bar()], maxval=100).start();
+    i = 0;
     for sentence in sentenceList:
         words = sentence.split(" ");
         for w in words:
             tagged = w.split("/");
+            
             if len(tagged) > 1:
                 TagDict[tagged[0]] = tagged[1];
 
-        TaggedSen.append(TagDict); 
+        TaggedSen.append(TagDict);
+        # print TagDict;      # - debug 
         TagDict = {};
+        pbar.update( i * 100 / len(sentenceList));
+        i = i+1;
 
-    # print TaggedSen;      - debug          
+    pbar.finish();
+
+    # print TaggedSen;      # - debug          
  
 
 """inputPrompt - Prompts the user for terminal input containing the absolute path 

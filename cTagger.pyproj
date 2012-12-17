@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>63b28364-7fbe-438a-b544-b28c43a2c685</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>cTagger.py</StartupFile>
+    <StartupFile>src\cTagger.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,7 +22,10 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="cTagger.py" />
+    <Compile Include="src\cTagger.py" />
+    <Compile Include="src\modules\progressbar\compat.py" />
+    <Compile Include="src\modules\progressbar\widgets.py" />
+    <Compile Include="src\modules\progressbar\__init__.py" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Corpus\parole-small.txt" />
@@ -31,6 +34,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Corpus\" />
+    <Folder Include="src\" />
+    <Folder Include="src\modules" />
+    <Folder Include="src\modules\progressbar\" />
     <Folder Include="Tags\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
