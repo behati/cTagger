@@ -25,7 +25,6 @@
     <Content Include="corpus\parole-small.txt" />
     <Content Include="corpus\parole.txt" />
     <Content Include="docs\LICENSE.txt" />
-    <Content Include="docs\README.txt" />
     <Content Include="modules\progressbar\compat.pyc" />
     <Content Include="modules\progressbar\progressbar.pyc" />
     <Content Include="modules\progressbar\terminal.pyc" />

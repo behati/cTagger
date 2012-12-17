@@ -34,7 +34,7 @@ def importText(location):
         for s in fixSen:
             finalSen.append(s + " ./RESID_SIGN");
 
-        # print finalSen; - debug
+        # print finalSen;   # - debug
         SortTags(finalSen);
  
 """SortTags(List)
@@ -58,16 +58,15 @@ def SortTags(sentenceList):
                 TagDict[tagged[0]] = tagged[1];
 
         TaggedSen.append(TagDict);
-        # print TagDict; - debug
+        # print TagDict;    # - debug
         TagDict = {};
         pbar.update( i * 100 / len(sentenceList)); # progressbar-module
         i = i+1;
 
     pbar.finish();
 
-    # print TaggedSen; - debug
+    # print TaggedSen;      # - debug
  
-
 """inputPrompt - Prompts the user for terminal input containing the absolute path
 of a readable file, using the raw_input function.
 """
