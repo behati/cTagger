@@ -5,10 +5,7 @@ import os
 import re
 import sys
 import time
-from progressbar import AnimatedMarker, Bar, BouncingBar, Counter, ETA, \
-                        FileTransferSpeed, FormatLabel, Percentage, \
-                        ProgressBar, ReverseBar, RotatingMarker, \
-                        SimpleProgress, Timer
+from modules.progressbar import *;
 
 
 

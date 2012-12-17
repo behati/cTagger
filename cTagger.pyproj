@@ -26,6 +26,7 @@
     <Compile Include="src\modules\progressbar\compat.py" />
     <Compile Include="src\modules\progressbar\widgets.py" />
     <Compile Include="src\modules\progressbar\__init__.py" />
+    <Compile Include="src\modules\__init__.py" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Corpus\parole-small.txt" />
